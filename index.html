@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<style>
+		body{
+  height:100vh
+	}
+	</style>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>Dinesh Pandiyan | Awesome Dev</title>
+	<title>Farid Al Rafi | Asik Dev</title>
 
 	<link rel="icon" href="favicon.ico" type="image/png" />
 
@@ -13,7 +18,7 @@
 	<link href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/styles.css">
-	<link rel="stylesheet" href="css/themes/indigo-white.css">
+	<link rel="stylesheet" href="css/themes/indigo-white.css" id="theme_css">
 	<!-- <link rel="stylesheet" href="css/themes/green-white.css"> -->
 	<!-- <link rel="stylesheet" href="css/themes/red-white.css"> -->
 	<!-- <link rel="stylesheet" href="css/themes/grey-white.css"> -->
@@ -25,8 +30,8 @@
 </head>
 <body>
 	<main>
-		<div class="intro">Hello, I'm Dinesh!</div>
-		<div class="tagline">All-Star Dev | Code Fanatic | Linux Hacker | Bleh</div>
+		<div class="intro">Hello, I'm Farid!</div>
+		<div class="tagline">Fullstack overflow Dev | Code Fanatic | IoT Enthusiast </div>
 		<!-- Find your icons from here - https://fontawesome.com/icons?d=gallery&s=brands -->
 		<div class="icons-social">
 			<a target="_blank" href="https://github.com/flexdinesh"><i class="fab fa-github"></i></a>
@@ -41,4 +46,22 @@
     </div>
 	</main>
 </body>
+<script>
+	const arrTheme = ['css/themes/indigo-white.css',
+						'css/themes/green-white.css',
+						"css/themes/red-white.css"]
+
+	let count = 0
+	document.body.addEventListener('click',()=>{
+		if (count < arrTheme.length){
+			++count;
+			document.getElementById('theme_css').href = arrTheme[count]
+		}else{
+			count = 0;
+		}
+		console.log(count)
+		//document.getElementById('theme_css').href = 'css/themes/white-indigo.css';
+})
+ </script>
+
 </html>
